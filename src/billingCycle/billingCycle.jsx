@@ -2,6 +2,11 @@ import React, { Component } from 'react';
 
 import ContentHeader from '../common/template/contentHeader';
 import Content from '../common/template/content';
+import Tabs from '../common/tab/tabs';
+import TabsHeader from '../common/tab/tabsHeader';
+import TabHeader from '../common/tab/tabHeader';
+import TabsContent from '../common/tab/tabsContent';
+
 
 class BillingCycle extends Component {
   render(){
@@ -12,7 +17,17 @@ class BillingCycle extends Component {
           small='Cadastro'
         />
         <Content>
-          Ciclosd de Pagamentos
+          <Tabs>
+            <TabsHeader>
+              <TabHeader label='Listar' icon='bars' target='tabList'/>
+              <TabHeader label='Listar' icon='plus' target='tabCreate' />
+              <TabHeader label='Altera' icon='pencil' target='tabUpdate' />
+              <TabHeader label='Excluir' icon='trash-o' target='tabDelete' />
+            </TabsHeader>
+            <TabsContent>
+            
+            </TabsContent>
+          </Tabs>
         </Content>
       </div>
     );
