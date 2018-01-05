@@ -34,7 +34,7 @@ class BillingCycle extends Component {
           <Tabs>
             <TabsHeader>
               <TabHeader label='Listar' icon='bars' target='tabList'/>
-              <TabHeader label='Listar' icon='plus' target='tabCreate' />
+              <TabHeader label='Incluir' icon='plus' target='tabCreate' />
               <TabHeader label='Altera' icon='pencil' target='tabUpdate' />
               <TabHeader label='Excluir' icon='trash-o' target='tabDelete' />
             </TabsHeader>
@@ -45,17 +45,23 @@ class BillingCycle extends Component {
               <TabContent id='tabCreate'>
                 <Form
                   onSubmit={this.props.create}
+                  submitLabel={'Incluir'}
+                  submitClass={'primary'}
                 />
               </TabContent>
               <TabContent id='tabUpdate'>
                 <Form
                   onSubmit={this.props.update}
+                  submitLabel={'Alterar'}
+                  submitClass={'info'}
                 />
               </TabContent>
               <TabContent id='tabDelete'>
                 <Form
                   onSubmit={this.props.remove}
                   readOnly={true}
+                  submitLabel={'Excluir'}
+                  submitClass={'danger'}
                 />
               </TabContent>
             </TabsContent>
