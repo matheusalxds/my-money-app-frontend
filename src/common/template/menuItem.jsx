@@ -14,8 +14,5 @@ export default props => (
     <Link to={props.path}>
       <i className={`fa fa-${props.icon}`}></i> {props.label}
     </Link>
-    <a href={props.path}>
-      <i className={`fa fa-${props.icon}`}></i> <span>{props.label}</span>
-    </a>
   </li>
 )
